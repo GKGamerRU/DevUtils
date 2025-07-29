@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using DevUtils.PageModules;
+using DevUtils.PageModules.CryptoModules;
 using DevUtils.PageModules.VisualModules;
 
 namespace DevUtilsAPI
@@ -18,6 +19,7 @@ namespace DevUtilsAPI
 
             {"!Multi-Line to Single-Line" , new MultiLineToSingle()},
             {"!Encrypt & Decrypt" , new Encryptor_Decryptor()},
+            {"!OffsetCrypto" , new OffsetEncryptor()},
             {"!Split Text" , new SplitTextModule()},
         };
 

@@ -84,6 +84,7 @@
     </Compile>
     <Compile Include="PageModule.cs" />
     <Compile Include="PageModules\CryptoModules\Encryptor_Decryptor.cs" />
+    <Compile Include="PageModules\CryptoModules\OffsetEncryptor.cs" />
     <Compile Include="PageModules\TextModules\MultiLineToSingle.cs" />
     <Compile Include="PageModules\TextModules\SplitTextModule.cs" />
     <Compile Include="PageModules\TextUtilsPage.cs" />

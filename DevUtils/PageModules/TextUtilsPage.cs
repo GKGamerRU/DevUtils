@@ -18,14 +18,18 @@ namespace DevUtils.PageModules
             var Calculate = UIs.CreateFlatButton("Multi-Line to Single-Line", new Point(455 / 2 - 300 / 2, 60), new Size(300, 30), AnchorStyles.None);
             Calculate.Click += delegate { UIs.ClearPanel(); Core.Pages["!Multi-Line to Single-Line"].GeneratePage(); };
 
-            var Calculate2 = UIs.CreateFlatButton("Encrypt & Decrypt", new Point(455 / 2 - 300 / 2, 100), new Size(300, 30), AnchorStyles.None);
+            var Calculate2 = UIs.CreateFlatButton("Aes Encrypt & Decrypt", new Point(455 / 2 - 300 / 2, 100), new Size(300, 30), AnchorStyles.None);
             Calculate2.Click += delegate { UIs.ClearPanel(); Core.Pages["!Encrypt & Decrypt"].GeneratePage(); };
 
-            var Calculate3 = UIs.CreateFlatButton("Split Text", new Point(455 / 2 - 300 / 2, 140), new Size(300, 30), AnchorStyles.None);
-            Calculate3.Click += delegate { UIs.ClearPanel(); Core.Pages["!Split Text"].GeneratePage(); };
+            var Calculate3 = UIs.CreateFlatButton("Offset Encryption|Decryption", new Point(455 / 2 - 300 / 2, 140), new Size(300, 30), AnchorStyles.None);
+            Calculate3.Click += delegate { UIs.ClearPanel(); Core.Pages["!OffsetCrypto"].GeneratePage(); };
+
+            var Calculate4 = UIs.CreateFlatButton("Split Text", new Point(455 / 2 - 300 / 2, 180), new Size(300, 30), AnchorStyles.None);
+            Calculate4.Click += delegate { UIs.ClearPanel(); Core.Pages["!Split Text"].GeneratePage(); };
+
             Control[] collection = new Control[]
             {
-                Calculate, Calculate2, Calculate3, label
+                Calculate, Calculate2, Calculate3, Calculate4, label
             };
             PlaceToPanel(collection);
         }
