@@ -2,7 +2,6 @@
 using FlatUI;
 using System;
 using System.Drawing;
-using System.Drawing.Imaging;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
@@ -45,11 +44,11 @@ namespace DevUtils.PageModules.CryptoModules
             SaveFile.Click += SaveFile_Click;
 
             Encrypt = UIs.CreateFlatButton("Encrypt/Decrypt", new Point(455 / 2 - 250 / 2, 170 + 170 + 10 + 10), new Size(250, 30), AnchorStyles.None);
-            Encrypt.Click += Calculate_Click;
+            Encrypt.Click += XorCrypto;
 
             Control[] collection = new Control[]
             {
-            Password,origin,Result,LoadFile,SaveFile,Encrypt,enchoType
+                Password,origin,Result,LoadFile,SaveFile,Encrypt,enchoType
             };
             PlaceToPanel(collection);
         }
@@ -76,17 +75,7 @@ namespace DevUtils.PageModules.CryptoModules
             }
         }
 
-        private void Decrypt_Click(object sender, EventArgs e)
-        {
-            XorCrypto();
-        }
-
-        private void Calculate_Click(object sender, EventArgs e)
-        {
-            XorCrypto();
-        }
-
-        void XorCrypto()
+        void XorCrypto(object sender, EventArgs e)
         {
             var bytes = encoding.GetBytes(origin.Text);
 
